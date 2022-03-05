@@ -215,3 +215,22 @@ for elem in list99:
     else:
         #end="" parameter allow us to change the next line predefined within the print() function.
         print(elem, end=", ") 
+
+#Removes repeated Keys from two dictionaries and returns a list with Unique keys from both Dictionaries.
+def inetrsection(obj1,obj2):
+    list1=[]
+    list2=[]
+    for key in obj1:
+        list1.append(key)
+    for key in obj2:
+        list2.append(key)
+    z=list(set(list1+list2))
+    for x in list1:
+        for y in list2:
+            if x==y:
+                print(x,y)
+                z.remove(x)
+    return print(z)
+
+
+inetrsection({"prop1":1,"prop2":2,"prop4":4},{"prop1":1,"prop3":3,"prop2":2,"prop5":5})
